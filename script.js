@@ -6,5 +6,12 @@ const personalMovieDB = {
     genres:[],
     privat:false,
 };
+
 const film = prompt('Один из последних просмотренных фильмов?');
 const grade = prompt('На сколько оцените его?');
+
+const movies = {
+    movies:{
+        film:grade
+    }
+};

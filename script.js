@@ -46,22 +46,22 @@ function detectPersonalLevel(){
         alert("Вы киноман");
     
     } else alert("Произошла ошибка");
-    
-    function showMyDB(privat){
-        if(privat === false){
-            console.log(personalMovieDB);
-        }
-    }
 }
 
 detectPersonalLevel();
 
-function writeYourGenres(){
-    let genres = [];
-    let a;
-    for(let i = 0; i < 3; i++){
-        a = prompt(`Ваш любимый жанр фильмов под номером ${i}`)
-        genres[i]= a;
+function showMyDB(private){
+    if(!private){
+        console.log(personalMovieDB);
     }
-    return genres;
+}
+
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres(){
+    let a;
+    for(let i = 1; i <= 3; i++){
+        a = prompt(`Ваш любимый жанр фильмов под номером ${i}`)
+        genres[i-1]= a;
+    }
 }
